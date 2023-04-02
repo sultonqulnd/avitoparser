@@ -23,14 +23,15 @@ button {
 }
 
 body {
-  background: url(../images/bg-icons/hero-line.svg), url(../images/bg-hero.png), url(../images/bg-icons/header-ellipse-3.svg), url(../images/bg-icons/header-ellipse-2.svg), url(../images/bg-icons/header-ellipse-1.svg);
+  background: url(../images/bg-icons/hero-line.svg), url(../images/bg-hero.png), url(../images/bg-icons/bg-header-ellipses.svg);
   background-repeat: no-repeat;
-  background-position: left -260px top 800px, right -280px top 180px, right -250px top 200px, right -250px top, right -70px top -20px;
+  background-position: left -260px top 800px, right -280px top 200px, right -300px top;
   font-family: "Futura PT", sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #16171b;
   background-color: #e5e5e5;
+  overflow-x: hidden;
 }
 body header {
   padding-top: 45px;
@@ -102,7 +103,7 @@ body main .hero .reg-btn {
   font-size: 24px;
   line-height: 31px;
   text-align: center;
-  padding: 25px 40px;
+  padding: 20px 40px;
   color: #fff;
   background: #5956e9;
   border-radius: 21px;
@@ -152,9 +153,9 @@ body main .hero .try button::before {
   z-index: -1;
 }
 body main .advantages {
-  background: url(../images/bg-icons/adv-line-1.svg), url(../images/bg-icons/adv-circle-1.svg), url(../images/bg-icons/adv-circle-2.svg), url(../images/bg-icons/adv-circle-3.svg), url(../images/bg-icons/adv-circle-4.svg);
+  background: url(../images/bg-icons/adv-line-1.svg), url(../images/bg-icons/bg-circles.svg);
   background-repeat: no-repeat;
-  background-position: center top, right top 600px, left -100px top 1200px, left 280px bottom 450px, right -100px bottom 185px;
+  background-position: center top, center top 540px;
   padding-top: 130px;
   padding-bottom: 180px;
 }
@@ -220,7 +221,10 @@ body main .advantages .advs .adv:nth-child(4) .img {
   position: relative;
 }
 body main .advantages .advs .adv:nth-child(4) .img::after {
-  content: url(../images/advantages/adv-4-mask.png);
+  content: "";
+  background-image: url(../images/advantages/adv-4-mask.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 58px;
   left: 104px;
@@ -244,7 +248,7 @@ body main .price h1 {
 }
 body main .price .cards {
   display: flex;
-  gap: 27px;
+  gap: 24px;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 70px;
@@ -252,7 +256,8 @@ body main .price .cards {
 body main .price .cards .card {
   background: #27272e;
   border-radius: 28px;
-  padding: 56px 35px;
+  padding: 42px 28px;
+  text-align: center;
 }
 body main .price .cards .card .p-1 {
   font-weight: 450;
@@ -289,14 +294,21 @@ body main .price .p-4 {
 }
 body main .price .p-5 {
   font-weight: 450;
-  font-size: 54.4954px;
+  font-size: 54px;
   line-height: 150%;
   text-align: center;
   color: #5956e9;
   padding-top: 20px;
+  padding-bottom: 20px;
+}
+body main .price .p-6 {
+  font-size: 36px;
+  line-height: 150%;
+  text-align: center;
+  color: #289f66;
 }
 body footer {
-  background: url(../images/bg-icons/bg-footer-1.svg), url(../images/bg-icons/bg-footer-3.png), url(../images/bg-icons/bg-footer-2.svg);
+  background: url(../images/bg-icons/bg-footer-ellipses.svg), url(../images/bg-icons/bg-footer-3.png), url(../images/bg-icons/bg-footer-2.svg);
   background-repeat: no-repeat;
   background-position: left -260px bottom, right bottom, right -260px bottom;
   padding-top: 160px;
@@ -419,4 +431,297 @@ body footer .copy {
   font-size: 16px;
   line-height: 21px;
   padding-bottom: 40px;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  body {
+    background: url(../images/bg-icons/hero-line.svg), url(../images/bg-hero.png), url(../images/bg-icons/bg-header-ellipses.svg);
+    background-repeat: no-repeat;
+    background-position: left -50px top 600px, right -180px top 650px, right -120px top -48px;
+    background-size: 100% 296px, 592px 411px, 367px 367px;
+    background-color: #e5e5e5;
+    overflow-x: hidden;
+  }
+  body header {
+    padding-top: 32px;
+  }
+  body header .logo {
+    width: 203px;
+    height: 45px;
+  }
+  body header .send {
+    width: 48px;
+    height: 48px;
+  }
+  body header .send img {
+    width: 42px;
+    height: 42px;
+  }
+  body main .hero .p-1 {
+    font-size: 20px;
+    line-height: 26px;
+    padding-top: 81px;
+    padding-bottom: 60px;
+  }
+  body main .hero .p-2 {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  body main .hero .p-3 {
+    font-size: 40px;
+    text-align: center;
+  }
+  body main .hero .p-4 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  body main .hero .p-5 {
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  body main .hero .reg-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body main .hero .mouse {
+    display: none;
+  }
+  body main .hero .try button {
+    padding: 8px 8px 8px 32px;
+    border-radius: 72px;
+    gap: 16px;
+  }
+  body main .hero .try button .text span:first-child {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  body main .hero .try button .text span:last-child {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  body main .hero .try button img {
+    height: 86px;
+  }
+  body main .hero .try button::before {
+    width: 294px;
+    height: 108px;
+    border-radius: 70px;
+    top: -3px;
+    left: -3px;
+  }
+  body main .advantages {
+    background: url(../images/bg-icons/bg-circles.svg);
+    background-repeat: no-repeat;
+    background-position: center top -400px;
+    background-size: 558px 1938px;
+    padding-bottom: 100px;
+  }
+  body main .advantages h1 {
+    font-size: 36px;
+    padding-bottom: 50px;
+  }
+  body main .advantages .advs {
+    gap: 36px;
+  }
+  body main .advantages .advs .adv {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  body main .advantages .advs .adv .text {
+    order: 2;
+    flex-basis: 100%;
+  }
+  body main .advantages .advs .adv .text .p-1 {
+    font-size: 40px;
+    padding-bottom: 0;
+  }
+  body main .advantages .advs .adv .text .p-2 {
+    font-size: 24px;
+    line-height: 31px;
+  }
+  body main .advantages .advs .adv .text .p-3 {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  body main .advantages .advs .adv .img {
+    display: flex;
+    justify-content: center;
+    order: 1;
+    flex-basis: 100%;
+  }
+  body main .advantages .advs .adv:first-child .img img {
+    width: 107px;
+    height: 162px;
+  }
+  body main .advantages .advs .adv:nth-child(2) .img img {
+    width: 158px;
+  }
+  body main .advantages .advs .adv:nth-child(2) .text::after {
+    top: 60px;
+    right: 0;
+    border-radius: 12px;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 3px 6px;
+  }
+  body main .advantages .advs .adv:nth-child(3) .img img {
+    width: 160px;
+  }
+  body main .advantages .advs .adv:nth-child(4) .img img {
+    width: 176px;
+    height: 138px;
+  }
+  body main .advantages .advs .adv:nth-child(4) .img::after {
+    width: 105px;
+    height: 85px;
+    top: 30px;
+    left: 140px;
+  }
+  body main .advantages .advs .adv:nth-child(5) .img img {
+    width: 179px;
+    height: 106px;
+  }
+  body main .price {
+    background: url(../images/bg-icons/bg-price-sm.svg), #d8e1e8;
+    background-size: cover;
+    padding-bottom: 120px;
+    border-radius: 20px;
+  }
+  body main .price h1 {
+    font-size: 36px;
+  }
+  body main .price .cards {
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 32px;
+  }
+  body main .price .cards .card {
+    padding: 36px 24px;
+    flex-basis: 220px;
+  }
+  body main .price .cards .card .p-1 {
+    font-size: 38px;
+    line-height: 49px;
+  }
+  body main .price .cards .card .p-2 {
+    font-size: 21px;
+    line-height: 27px;
+    padding-bottom: 24px;
+  }
+  body main .price .cards .card .p-3 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  body main .price .p-4 {
+    font-size: 24px;
+  }
+  body main .price .p-5 {
+    font-size: 36px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  body main .price .p-6 {
+    font-size: 24px;
+  }
+  body footer {
+    background: url(../images/bg-icons/bg-footer-3.png), url(../images/bg-icons/bg-footer-ellipses.svg), url(../images/bg-icons/bg-footer-2.svg);
+    background-repeat: no-repeat;
+    background-size: 294px 339px, 456px 456px, 690px 690px;
+    background-position: center bottom, left -104px bottom, right -459px bottom -200px;
+    padding-top: 100px;
+  }
+  body footer .p-1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  body footer .p-2 {
+    font-size: 40px;
+    margin-bottom: 42px;
+  }
+  body footer .subscribe {
+    flex-wrap: wrap;
+    gap: 48px;
+    padding-bottom: 62px;
+  }
+  body footer .subscribe .reminder {
+    order: 1;
+  }
+  body footer .subscribe .reminder .icon {
+    font-size: 39px;
+    line-height: 50px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  body footer .subscribe .reminder .p-4 {
+    font-size: 18.2425px;
+    line-height: 23px;
+  }
+  body footer .subscribe .login {
+    order: 2;
+    padding: 30px;
+    border-radius: 16px;
+  }
+  body footer .subscribe .login .p-3 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  body footer .subscribe .login label {
+    font-size: 15px;
+    line-height: 19px;
+    padding-bottom: 4px;
+  }
+  body footer .subscribe .login input {
+    border: 0.61657px solid #d6e0e7;
+    border-radius: 9.24856px;
+    padding: 10px 16px;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 12px;
+  }
+  body footer .subscribe .login .agree {
+    gap: 12px;
+    padding-bottom: 24px;
+    padding-top: 16px;
+  }
+  body footer .subscribe .login .agree input {
+    width: 15px;
+    height: 15px;
+    border: 1.23px solid #d6e0e7;
+    border-radius: 4.32px;
+  }
+  body footer .subscribe .login .agree label {
+    font-size: 10px;
+    line-height: 13px;
+  }
+  body footer .subscribe .login button {
+    border-radius: 13px;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 19px;
+  }
+  body footer .footer-logo {
+    padding-left: 0;
+    padding-bottom: 360px;
+  }
+  body footer .footer-logo img {
+    width: 203px;
+    height: 45px;
+  }
+  body footer .copy {
+    padding-bottom: 90px;
+  }
+  body footer .copy p {
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
